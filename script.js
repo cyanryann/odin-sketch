@@ -14,7 +14,12 @@ function makeGrid(x = 20) {
             let cell = document.createElement("div");
             cell.style.flexGrow=1;
             cell.id = "cell";
+
             row.append(cell);
+            cell.addEventListener("mouseenter", () => {
+                cell.style.backgroundColor="#000000";
+                console.log("writing!");
+            })
         }
     }
     console.log("building");

@@ -1,5 +1,5 @@
 * {
-    border: 1px black solid;
+
 }
 .grid {
     display:flex;
@@ -19,6 +19,7 @@
 button {
     width: 100px;
     height: 40px;
+    border-radius: 10px;
     text-align: center;
     align-items: center;
     margin-top: 10px;
@@ -32,9 +33,6 @@ button:active {
 }
 h2 {
     text-align: center;
-}
-#cell:hover {
-    background-color: black;
 }
 #cell {
     border: 1px black solid;
