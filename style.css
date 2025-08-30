@@ -1,0 +1,13 @@
+* {
+    border: 1px black solid;
+}
+.grid {
+    display:flex;
+    flex-direction: column;
+}
+h2 {
+    text-align: center;
+}
+#cell:hover {
+    background-color: black;
+}
