@@ -55,5 +55,9 @@ colors.forEach((button) => {
             color = "#0000FF";
         if (button.id == "green")
             color = "#008000";
+        colors.forEach((button) => {
+            button.style.backgroundColor = "#dadadaff";
+        })
+        button.style.backgroundColor = color;
     })
 })
