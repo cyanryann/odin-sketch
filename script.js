@@ -1,5 +1,7 @@
 const grid = document.querySelector(".grid");
 const gridmaker = document.querySelector("#gridmaker");
+const colors = document.querySelectorAll(".colors button");
+let color = "#000000";
 function makeGrid(x = 20) {
     for (let i = 0; i < x; i++)
     {
@@ -17,7 +19,8 @@ function makeGrid(x = 20) {
 
             row.append(cell);
             cell.addEventListener("mouseenter", () => {
-                cell.style.backgroundColor="#000000";
+                let ncolor = color;
+                cell.style.backgroundColor= ncolor;
                 console.log("writing!");
             })
         }
@@ -39,4 +42,18 @@ gridmaker.addEventListener("click", () => {
     let x = prompt("How many rows and columns do you want!");
     x = Math.min(100, x);
     makeGrid(x);
+})
+colors.forEach((button) => {
+    button.addEventListener("click", () => {
+        if (button.id == "black")
+            color = "#000000";
+        if (button.id == "white")
+            color = "#FFFFFF";
+        if (button.id == "red")
+            color = "#FF0000";
+        if (button.id == "blue")
+            color = "#0000FF";
+        if (button.id == "green")
+            color = "#008000";
+    })
 })
